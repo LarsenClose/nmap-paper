@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.6.2)  5 JUN 2020 14:49
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.6.2)  5 JUN 2020 21:22
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -475,63 +475,76 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
-LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 148.
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 144.
 (/usr/local/texlive/2020/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
 <ifconfig.png, id=1, 589.20125pt x 68.255pt>
 File: ifconfig.png Graphic file (type png)
 <use ifconfig.png>
-Package pdftex.def Info: ifconfig.png  used on input line 154.
+Package pdftex.def Info: ifconfig.png  used on input line 150.
 (pdftex.def)             Requested size: 252.94499pt x 29.3022pt.
  [1
 
 {/Users/lclose/Library/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-<ping.png, id=13, 613.29124pt x 1130.2225pt>
+<ping.png, id=12, 613.29124pt x 1130.2225pt>
 File: ping.png Graphic file (type png)
 <use ping.png>
-Package pdftex.def Info: ping.png  used on input line 167.
+Package pdftex.def Info: ping.png  used on input line 166.
 (pdftex.def)             Requested size: 252.94499pt x 466.15356pt.
  [2 </Users/lclose/Documents/LaTeX/ifconfig.png> </Users/lclose/Documents/LaTeX/ping.png>]
-<shodan.png, id=19, 455.7025pt x 336.25626pt>
+<shodan.png, id=18, 455.7025pt x 336.25626pt>
 File: shodan.png Graphic file (type png)
 <use shodan.png>
-Package pdftex.def Info: shodan.png  used on input line 199.
+Package pdftex.def Info: shodan.png  used on input line 198.
 (pdftex.def)             Requested size: 252.94499pt x 186.65009pt.
  [3 </Users/lclose/Documents/LaTeX/shodan.png>]
-Overfull \hbox (63.73944pt too wide) in paragraph at lines 210--261
+<unknown.png, id=23, 645.41125pt x 376.40625pt>
+File: unknown.png Graphic file (type png)
+<use unknown.png>
+Package pdftex.def Info: unknown.png  used on input line 211.
+(pdftex.def)             Requested size: 252.94499pt x 147.51578pt.
+
+Overfull \hbox (20.08951pt too wide) in paragraph at lines 217--266
  [] 
  []
 
-[4]
-Underfull \hbox (badness 1701) in paragraph at lines 279--280
-[]\T1/zgmx/m/n/10 Marquez, V., Frohlich, T., Ar-ma-che, J. P., Sohmen, D., Don-hofer, A., Miko-la-jka, A., Bern-ing-hausen, O., 
- []
-
-
-Underfull \hbox (badness 2538) in paragraph at lines 279--280
-\T1/zgmx/m/n/10 Thomm, M., Beck-mann, R., Arnold, G. J., and Wil-son, D. N. (2011) Pro-teomic char-ac-ter-i-za-tion of ar- 
- []
-
-
-Underfull \hbox (badness 2119) in paragraph at lines 284--285
-[]\T1/zgmx/m/n/10 Agricultural Re-search Ser-vice, U.S.D.A. Na-tional Nu-tri-ent Database for Stan-dard Ref-er-ence, Re-lease 26, 
- []
-
-[5] (/Users/lclose/Documents/LaTeX/science_outline.aux) ) 
+[4 </Users/lclose/Documents/LaTeX/unknown.png>]
+<down.png, id=28, 650.43pt x 102.3825pt>
+File: down.png Graphic file (type png)
+<use down.png>
+Package pdftex.def Info: down.png  used on input line 299.
+(pdftex.def)             Requested size: 252.94499pt x 39.81496pt.
+<fcc1.png, id=29, 3967.82375pt x 2976.11874pt>
+File: fcc1.png Graphic file (type png)
+<use fcc1.png>
+Package pdftex.def Info: fcc1.png  used on input line 325.
+(pdftex.def)             Requested size: 252.94499pt x 189.68532pt.
+ [5 </Users/lclose/Documents/LaTeX/down.png>]
+<radio.png, id=34, 884.30376pt x 157.58875pt>
+File: radio.png Graphic file (type png)
+<use radio.png>
+Package pdftex.def Info: radio.png  used on input line 338.
+(pdftex.def)             Requested size: 252.94499pt x 45.07436pt.
+<bug.png, id=35, 1257.69875pt x 1028.84375pt>
+File: bug.png Graphic file (type png)
+<use bug.png>
+Package pdftex.def Info: bug.png  used on input line 357.
+(pdftex.def)             Requested size: 379.4175pt x 310.36668pt.
+ [6 </Users/lclose/Documents/LaTeX/fcc1.png> </Users/lclose/Documents/LaTeX/radio.png>] [7 </Users/lclose/Documents/LaTeX/bug.png>] (/Users/lclose/Documents/LaTeX/science_outline.aux) ) 
 Here is how much of TeX's memory you used:
- 6083 strings out of 480476
- 90061 string characters out of 5899592
- 358793 words of memory out of 5000000
- 22001 multiletter control sequences out of 15000+600000
- 584120 words of font info for 53 fonts, out of 8000000 for 9000
+ 6125 strings out of 480476
+ 90587 string characters out of 5899592
+ 353860 words of memory out of 5000000
+ 22040 multiletter control sequences out of 15000+600000
+ 583591 words of font info for 51 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 38i,7n,45p,952b,381s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/Users/lclose/Library/texmf/fonts/enc/dvips/garamondx/swashQ.enc}{/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/Users/lclose/Library/texmf/fonts/enc/dvips/garamondx/zgmt1.enc}</Users/lclose/Library/texmf/fonts/type1/public/garamondx/NewG8-Bol.pfb></Users/lclose/Library/texmf/fonts/type1/public/garamondx/NewG8-Ita.pfb></Users/lclose/Library/texmf/fonts/type1/public/garamondx/NewG8-Reg.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb>
-Output written on /Users/lclose/Documents/LaTeX/science_outline.pdf (5 pages, 590286 bytes).
+ 38i,7n,45p,866b,381s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/Users/lclose/Library/texmf/fonts/enc/dvips/garamondx/zgmt1.enc}</Users/lclose/Library/texmf/fonts/type1/public/garamondx/NewG8-Bol.pfb></Users/lclose/Library/texmf/fonts/type1/public/garamondx/NewG8-Ita.pfb></Users/lclose/Library/texmf/fonts/type1/public/garamondx/NewG8-Reg.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb>
+Output written on /Users/lclose/Documents/LaTeX/science_outline.pdf (7 pages, 17148872 bytes).
 PDF statistics:
- 52 PDF objects out of 1000 (max. 8388607)
+ 62 PDF objects out of 1000 (max. 8388607)
  33 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 16 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 41 words of extra memory for PDF output out of 10000 (max. 10000000)
 
