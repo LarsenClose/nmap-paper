@@ -1,7 +1,7 @@
 # Fdb version 3
-["pdflatex"] 1591414707 "/Users/lclose/Documents/nmap-paper/paper.tex" "/Users/lclose/Documents/nmap-paper/paper.pdf" "paper" 1591414711
-  "/Users/lclose/Documents/nmap-paper/paper.aux" 1591414710 2204 cf0a0538b7a4e2bf592ad42624c06413 ""
-  "/Users/lclose/Documents/nmap-paper/paper.tex" 1591414694 20722 0a3df89c32d0b9826294d82b62b35f2a ""
+["pdflatex"] 1591428577 "/Users/lclose/Documents/nmap-paper/paper.tex" "/Users/lclose/Documents/nmap-paper/paper.pdf" "paper" 1591428635
+  "/Users/lclose/Documents/nmap-paper/paper.aux" 1591428581 2190 a42a9cd4ad21debd8db390fd4e05022e ""
+  "/Users/lclose/Documents/nmap-paper/paper.tex" 1591428634 22474 a7f428309ed8740cc3d264372d69ac1e ""
   "/Users/lclose/Library/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1591096010 4861310 03dfd246f2f99294e8cb3d25013efb1b ""
   "/Users/lclose/Library/texmf/fonts/enc/dvips/garamondx/zgmt1.enc" 1418348256 3056 445487d14ad421b629de7c63eca263d5 ""
   "/Users/lclose/Library/texmf/fonts/tfm/public/garamondx/T1-zgm-b-lf.tfm" 1495233246 20548 5a51ac3d214a33e45272272c15241092 ""
@@ -80,15 +80,15 @@
   "down.png" 1591394600 56955 ba00b68fbeb227154c641865f071b7dc ""
   "fcc1.png" 1591401849 12084516 485bdbf16067f46939189d429b7286e1 ""
   "ifconfig.png" 1591339361 42839 d8471d10d787d257ed2d63adffb23a60 ""
-  "paper.aux" 1591414710 2204 cf0a0538b7a4e2bf592ad42624c06413 "pdflatex"
-  "paper.tex" 1591414694 20722 0a3df89c32d0b9826294d82b62b35f2a ""
+  "paper.aux" 1591428581 2190 a42a9cd4ad21debd8db390fd4e05022e "pdflatex"
+  "paper.tex" 1591428634 22474 a7f428309ed8740cc3d264372d69ac1e ""
   "ping.png" 1591339841 698343 a9ab2dee00166e2c25ca629056359b80 ""
   "radio.png" 1591404323 49363 0d2b0f1ba7b1053b105d1b24679e223e ""
   "shodan.png" 1591354170 48711 71bcb50a3deb82f8c3b603ac12bbf613 ""
   "unknown.png" 1591391743 208088 a0558ab7a747146ba0763e8c90d9862c ""
   (generated)
-  "paper.aux"
-  "/Users/lclose/Documents/nmap-paper/paper.log"
-  "paper.log"
   "paper.pdf"
+  "/Users/lclose/Documents/nmap-paper/paper.log"
   "/Users/lclose/Documents/nmap-paper/paper.pdf"
+  "paper.aux"
+  "paper.log"
