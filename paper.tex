@@ -132,16 +132,16 @@ where applicable.
 
 \section*{methods and measurement}
 To begin we need to know which IP addresses to scan. Using the command: \begin{verbatim}ifconfig | grep broadcast\end{verbatim} 
-We determined the local networks and the subnet ranges. As can be seen in \textbf{Figure \ref{ifconfig image}}, the networks are \verb|10.0.0.0/24|
-\verb|192.168.0.0/24|. The \verb|netmask 0xffffff00| tells us the range for hosts is limited the last octet, digits 1-254.
+We can determine the local networks and the subnet ranges. As seen in \textbf{Figure \ref{ifconfig image}}, the networks are \verb|10.0.0.0/24|
+and \verb|192.168.0.0/24|. The \verb|netmask 0xffffff00| tells us the range for hosts is limited the last octet, digits 1-254.
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.5\textwidth]{ifconfig.png}
+\includegraphics[width=0.5\textwidth]{images/ifconfig.png}
 \caption{First the command 'ifconfig | grep broadcast' identifies the local networks.}\label{ifconfig image}
 \end{figure}
 
-\subsection*{super user privileges for scanning}
+\subsection*{rivileges for scanning}
 Next a ping scan  quickly lists the hosts. It's likely that you will not get a full list if you do not run this command with super user privileges.
 Testing without sudo resulted in 1 host and 9 hosts. To ping scan both networks:
 \begin{verbatim}
@@ -151,7 +151,7 @@ sudo nmap -sn 10.0.0.0/24
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.4\textwidth]{ping.png}
+\includegraphics[width=0.4\textwidth]{images/ping.png}
 \caption{Ping scans returning 14 and 7 hosts.}\label{ping image}
 \end{figure}
 As we can see in \textbf{Figure \ref{ping image}}, the ping scan with sudo returned a list of 14 hosts and 7 hosts respectively. 
@@ -183,12 +183,12 @@ shows a screen shot from their web service.
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.5\textwidth]{shodan.png}
+\includegraphics[width=0.5\textwidth]{images/shodan.png}
 \caption{From website https://www.shodan.io/ often called "the most dangerous search engine in the world"}\label{shodan image}
 \end{figure}
 
 \subsection*{compiling results}
-The table below, \textbf{Table \ref{local table}}, is a compilation of all the scans. The aggressive scans discovered more hosts missed by the privileged ping scans.
+The table below, \textbf{Table \ref{local table}}, is a compilation of all the scans. The aggressive scans discovered more hosts missed by the ping scans.
 Immediately some interesting things are visible from the table. My HomePod has two IP addresses on the same network. After logging into and checking the router
 it appears both are running on the same 5G WiFi network. While going through the results I was familiar with everything except for host 192.168.0.32 which was running ssh
 on port 22. I checked the routers DCHP Reservations and found no information there either. Scans showed the mac address \verb|80:1F:12:C6:CF:77| as well as some
@@ -196,7 +196,7 @@ additional information. Seen here using a targeted aggressive scan of just this 
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.5\textwidth]{unknown.png}
+\includegraphics[width=0.5\textwidth]{images/unknown.png}
 \caption{Resulting scan of unfamiliar device}\label{unknown image}
 \end{figure}
 
@@ -276,7 +276,7 @@ MAC Address: 80:1F:12:C6:CF:77 (Microchip Technology)
   0-255 and in the case of networking some addresses are reserved, such as broadcast on 255.
 \end{verbatim}
 
-The products section of Microchip Technologies website at \verb|https://www.microchip.com/| included embedded architecture,
+The products section of Microchip Technologies website at \verb|https://www.microchip.com/| includes embedded architecture,
 security, smart monitoring and networking devices among others.\cite{microchip} This prompted the question, could my smart device
 for the lock on my door have started running a password based ssh connection on my network as soon as I plugged in the 
 ethernet cable?
@@ -286,7 +286,7 @@ Immediately unplugging the device then rescanning confirmed this hypothesis, see
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.5\textwidth]{down.png}
+\includegraphics[width=0.5\textwidth]{images/down.png}
 \caption{Rescan after unplugging}\label{down image}
 \end{figure}
 
@@ -310,41 +310,41 @@ and legal concerns prevented me from attempting any thing like this myself witho
 \subsection*{not-so smart devices}
 The most concerning finding was the smart device which controls my lock and was mandated for every unit in the building. Along with a possible network attack vector, 
 I was able to plug and unplug the device because it is not stored in a secure cabinet. All of the devices in my building are the same so if one is compromised 
-every unit is compromised. Likely nationwide a huge number of homes would be compromised. Here in \textbf{Figure \ref{fcc1 image}} are the FCC IDs for the device.
+every unit is compromised. Likely nationwide a huge number of homes would be compromised. Here in \textbf{Figure \ref{fcc image}} are the FCC IDs for the device.
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.5\textwidth]{fcc1.png}
-\caption{The FCC ID's clearly displayed}\label{fcc1 image}
+\includegraphics[width=0.5\textwidth]{images/fcc.png}
+\caption{The FCC ID's clearly displayed}\label{fcc image}
 \end{figure}
 
 \subsection*{fcc id}
 The FCC ID's are \verb|2AAU7-ZB2ZWUS XMR201807EG91NA| the records for which are all public. The FCC website is pretty terrible to use but using
-\verb|www.fcc.io| we can search FCC site with a much better UI. The records tell us that the device has a Quectel Wireless chip for the cellular connection, with a list of
+\verb|www.fcc.io| we can search the FCC site using a much better UI. The records tell us the device has a Quectel Wireless chip for the cellular connection, with a list of
 the frequencies, and a Z-Wave module for the radio connection to the lock.\cite{fcc} The records give us two possible frequencies for the Z-wave. One of which is shown in
 \textbf{Figure \ref{radio image}}. It is beyond the scope of this paper but a software defined radio could be used to capture and analyze the signals on that frequency.
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.5\textwidth]{radio.png}
+\includegraphics[width=0.5\textwidth]{images/radio.png}
 \caption{Radio frequency}\label{radio image}
 \end{figure}
 
 \subsection*{nmap OS fingerprinting}
-Many of the devices on my network have unrecognized operating systems, for these cases nmap asks we submit of the fingerprint if the OS is known. I tried to submit the 
+Many of the devices on the network have unrecognized operating systems, for these cases nmap asks we submit the fingerprint if the OS is known. I tried to submit 
 fingerprints but ran into a bug on the site. There is no section on the submission form for writing what the OS actually is, \textbf{Figure \ref{bug image}}. 
-Alternatively the unknown services submission site has the section missing from the OS's. I signed up to the dev-mailing list, as suggested by the site for bug 
+Alternatively the unknown services submission site has the section missing from the OS submission form. I signed up to the dev-mailing list, as suggested by the site for bug 
 reporting, and will try and see if the bug is known.\cite{submit} I also ran into several issues with Zenmap on Catalina, issues installing, running, saving scans and crashing
-selecting topology.
+when selecting topology.
 
 \medskip
 
 \subsection*{next steps}
-In addition to the further avenues for research within the network, next steps include more testing on these issues and bug reporting to nmap dev-list and issue
+In addition to continuing research on the network and hosts, next steps include more testing on these issues and bug reporting to nmap dev-list and issue
 trackers.
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.95\textwidth]{bug.png}
+\includegraphics[width=0.95\textwidth]{images/bug.png}
 \caption{Nmap OS fingerprint submission page missing OS name category}\label{bug image}
 \end{figure}
 
@@ -370,32 +370,34 @@ Throughout this exploration there was constant learning, experienced gained and 
 grafana off when I am not using it until I have it setup with production level security. I decided that my smart device was better off 
 having less connectivity and that I would not be plugging it into my local network. With more time I would have looked more closely into exactly
 what was and wasn't returned from the different nmap scans including UDP scans and see if I could find more information locally using options for 
-firewall and IDS evasion. The questions I brought to the paper were all answered and I was left with more questions replacing them.
+firewall and IDS evasion. The questions I brought to the paper were all answered and I was left with new questions replacing them.
 
-\subsection*{tails questions}
+\subsection*{tails}
 I found out what is returned from tails during network scans, nothing at all and a mac address which automatically changes on every boot.
 I had heard that the issue of what to do with local network traffic on tails had still not been completely resolved but I take it that is mostly
 referring to what the machine running tails wants to do on the local network.
 
 \subsection*{surprises}
-It was astounding to see how many services actively run on my HomePod and my appleWatch. Also strange to learn that the HomePod regularly uses two
-IP addresses. I just used the UncOver zero-day on iOS from a couple weeks back to jailbreak an old iPad. My hope was to find something like Little Snitch
-for iOS but it is pretty neat to have root access to my iPad and be able to ssh to it. Maybe an approach like this would work for the HomePod to
-continually see just what is happening with all those services.
+It was astounding to see how many services actively run on my HomePod and my appleWatch. Also strange to learn that my HomePod is using two
+IP addresses. I used the UncOver zero-day on iOS a couple weeks ago to jailbreak an old iPad. My hope was to find something like Little Snitch
+for iOS but regardless it's nice to have root access to my iPad and be able to ssh to it. Maybe an approach like this would work for the HomePod to
+monitor in real time just what is actually happening with all those services.
 
 \subsection*{telnet}
 I hadn't ever explored the telnet connection to my CenturyLink device. It was interesting to see how different the telnet interfaces are between devices. 
-I found methods for closing the open 4567 port running tram on other manufacturers routers but almost none of the commands were consistent or even available between devices.
+I found methods for closing the open 4567 port running tram on other manufacturers routers but almost none of the commands were consistent or even available 
+between devices.
 
 \subsection*{z-wave}
-I'd been meaning to research the smart device and so was glad to get a chance. I think the current version of Z-wave is relatively 
-secure but found some talk about downgrade attacks forcing devices to use older versions. I have some other Z-wave devices here so I'm curious to see if I can
-get them to connect. I have a hackrf-one software defined radio and would love to do security research on Z-wave but time is always a limiting factor as well
-as the strict and tricky legality concerns, especially when dealing with radio. I found a 2020 paper using the hackrf-one to do a denial of service attack
-on Z-wave versions s0-s2 but haven't seen much beyond that.
+I'd been meaning to research the smart device and so I was glad to get an excuse to spend some time doing so. I've read the current version of Z-wave is 
+relatively secure but found some talk about downgrade attacks forcing devices to use older versions. I have some other Z-wave devices here so I'm curious
+to see if I can get them to connect. I have a HackRF-One software defined radio and would love to do security research on Z-wave but time is always a limiting 
+factor as well as the strict and tricky legality concerns, especially when dealing with radio. I did find a 2020 paper using the HackRF-One to do denial of service
+attacks on Z-wave versions s0-s2 but haven't seen much beyond that.
 
 \subsection*{latex}
-I also used this as an opportunity to try using LaTeX for the first time, which I borderline came to regret as I didn't realize there was some learning curve. I especially 
-struggled towards the end figuring out formatting for the bibliography and citations while tired and needing to finish. This probably more than anything else led to the paper 
-taking a lot of time but also added to what was gained from the assignment and gave me incredible control in formatting.
+I also used this as an opportunity use LaTeX for the first time, which I borderline came to regret as I realized there was some learning curve. I especially 
+struggled towards the end figuring out formatting for the bibliography and citations while tired and needing to finish. Which I am still not certain are exactly
+but are on track with the guidelines and their clarity. Using LaTeX probably more than most else led to the paper taking significant time but also added to what 
+was learned and gave incredible control in formatting.
 \end{document}
