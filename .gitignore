@@ -21,6 +21,6 @@
 *.mtc1
 *.out
 *.fdb_latexmk
-*.vscode
 *.fls
 *.synctex.gz
+.vscode
