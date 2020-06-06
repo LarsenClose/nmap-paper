@@ -1,2 +1,3 @@
 images/bug.png
 images/down.png
+images/fcc.png
