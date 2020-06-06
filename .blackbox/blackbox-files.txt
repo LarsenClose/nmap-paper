@@ -2,3 +2,4 @@ images/bug.png
 images/down.png
 images/fcc.png
 images/ifconfig.png
+images/ping.png
